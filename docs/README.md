@@ -7,9 +7,9 @@ config:
     full: true
     background: tint-plate
     hero:
-      name: Theme Plume
-      tagline: VuePress Next Theme
-      text: 一个简约的，功能丰富的 vuepress 文档&博客 主题
+      name: 智慧教育
+      tagline: 文档管理中心
+      text: ——HebutA219实验室
       actions:
         -
           theme: brand
