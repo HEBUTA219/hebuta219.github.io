@@ -24,7 +24,7 @@ config:
   -
     type: profile
     name: 郎瑞峰
-    description: 我将融入剧烈争斗的大人世界，要在那边孤军奋战，必须变得比任何人都坚不可摧。
+    description: 我自登峰，风自来。
     avatar: /images/郎瑞峰.png
   -
     type: profile
