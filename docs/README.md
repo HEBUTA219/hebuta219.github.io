@@ -15,7 +15,7 @@ config:
       actions:
         -
           text: 快速开始
-          link: /blog/
+          link: /notes/docs/README.md
           theme: brand
         -
           text: Github
