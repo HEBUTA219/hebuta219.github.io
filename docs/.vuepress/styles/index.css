@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'Pacifico';
+  src: url('/fonts/Pacifico.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'MaShanZheng';
+  src: url('/fonts/MaShanZheng.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 应用于首页 Banner 的字体样式 */
+.hero-name {
+  font-family: 'MaShanZheng', sans-serif;
+  font-weight: 400 !important;
+  white-space: nowrap;
+}
+
+.hero-text {
+  font-family: 'MaShanZheng', sans-serif;
+  font-weight: 400 !important;
+  font-size: 25px !important;
+}
+
+.hero-tagline {
+  font-family: 'Pacifico', sans-serif !important;
+  display: flex !important;
+  justify-content: flex-end; /* 让里面内容靠右 */
+  align-items: center;
+  padding-right: 20px;
+  gap: 8px; /* 可选：拉开两个 span 间距 */
+}
+
+.vp-home-profile{
+  font-family: 'MaShanZheng', sans-serif;
+}
+
+.vp-home-profile{
+  font-family: 'MaShanZheng', sans-serif;
+}
