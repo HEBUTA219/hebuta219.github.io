@@ -1,5 +1,5 @@
 ---
-title: Docs
+title: 智慧教育系统说明文档
 createTime: 2025/04/22 15:26:30
 permalink: /docs/
 ---
