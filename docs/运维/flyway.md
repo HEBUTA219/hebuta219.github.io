@@ -167,7 +167,7 @@ spring:
 
 1. **sql文件名约定**
 
-![在这里插入图片描述](https://raw.githubusercontent.com/she1110/typora-/master/aed08df531886c236977a8f5998fb1a6.png)
+​	V{版本号}__{功能描述}.sql
 
 ![image-20250426235041625](https://raw.githubusercontent.com/she1110/typora-/master/image-20250426235041625.png)
 
