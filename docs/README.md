@@ -39,7 +39,7 @@ config:
   -
     type: profile
     name: 郎瑞峰
-    description: 我自登峰，风自来。
+    description: 不张嘴的人永远吃不到饭。
     avatar: /images/郎瑞峰.png
   -
     type: profile
