@@ -70,15 +70,15 @@ config:
     type: profile
     name: 杨凤杰
     description: 君子可欺之以方，难罔以非其道。
-    avatar: /images/杨凤杰.jpeg
+    avatar: /images/杨凤杰.jpg
   -
     type: profile
     name: 于波
     description: 虽偶有轻风细雨，但总归晴天朗照。
-    avatar: /images/周于波.jpeg
+    avatar: /images/于波.jpg
   -
     type: profile
     name: 钟欣欣
     description: 不怕百事不利，就怕灰心丧气。
-    avatar: /images/钟欣欣.jpeg
+    avatar: /images/钟欣欣.jpg
 ---
