@@ -1,0 +1,233 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /><meta name="generator" content="VuePress 2.0.0-rc.21" /><meta name="theme" content="VuePress Theme Plume 1.0.0-rc.143" /><script id="check-mac-os">document.documentElement.classList.toggle('mac', /Mac|iPhone|iPod|iPad/i.test(navigator.platform))</script><script id="check-dark-mode">;(function () {const um= localStorage.getItem('vuepress-theme-appearance') || 'auto';const sm = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;const isDark = um === 'dark' || (um !== 'light' && sm);document.documentElement.dataset.theme = isDark ? 'dark' : 'light';})();</script><link rel="icon" type="image/png" href="/images/logo.png"><title>Spring基本思想 | HebutA219</title><meta name="description" content="河北工业大学智慧教育与工业创新实验室门户网站"><link rel="preload" href="/assets/style-BoxNvnxw.css" as="style"><link rel="stylesheet" href="/assets/style-BoxNvnxw.css"><link rel="modulepreload" href="/assets/app-CAXNO6dR.js"><link rel="modulepreload" href="/assets/index.html-BwiKYR4g.js"></head><body><div id="app"><!--[--><!--[--><div class="theme-plume vp-layout" vp-container data-v-cbe75d8c><!--[--><!--[--><!--]--><!--[--><span tabindex="-1" data-v-826d023e></span><a href="#VPContent" class="vp-skip-link visually-hidden" data-v-826d023e> Skip to content </a><!--]--><!----><header class="vp-nav" data-v-cbe75d8c data-v-e3d26596><div class="vp-navbar" vp-navbar data-v-e3d26596 data-v-d2b84b78><div class="wrapper" data-v-d2b84b78><div class="container" data-v-d2b84b78><div class="title" data-v-d2b84b78><div class="vp-navbar-title" data-v-d2b84b78 data-v-ec291590><a class="vp-link no-icon link title" href="/" data-v-ec291590 data-v-5d1d166c><!--[--><!--[--><!--]--><!--[--><!--[--><!--[--><img class="vp-image dark logo" style="" src="/images/logo.png" alt data-v-65630712><!--]--><!--[--><img class="vp-image light logo" style="" src="/images/logo.png" alt data-v-65630712><!--]--><!--]--><!--]--><span data-v-ec291590>HebutA219</span><!--[--><!--]--><!--]--><!----></a></div></div><div class="content" data-v-d2b84b78><div class="content-body" data-v-d2b84b78><!--[--><!--]--><div class="vp-navbar-search search" data-v-d2b84b78><div class="search-wrapper" data-v-0b918eab><!----><div id="local-search" data-v-0b918eab><button type="button" class="mini-search mini-search-button" aria-label="搜索文档" data-v-0b918eab><span class="mini-search-button-container"><span class="mini-search-search-icon vpi-mini-search" aria-label="search icon"></span><span class="mini-search-button-placeholder">搜索文档</span></span><span class="mini-search-button-keys"><kbd class="mini-search-button-key"></kbd><kbd class="mini-search-button-key">K</kbd></span></button></div></div></div><!--[--><!--]--><nav aria-labelledby="main-nav-aria-label" class="vp-navbar-menu menu" data-v-d2b84b78 data-v-3a384c0d><span id="main-nav-aria-label" class="visually-hidden" data-v-3a384c0d>Main Navigation</span><!--[--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/" tabindex="0" data-v-3a384c0d data-v-df386fbc data-v-5d1d166c><!--[--><!----><span data-v-df386fbc>首页</span><!----><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/docs/" tabindex="0" data-v-3a384c0d data-v-df386fbc data-v-5d1d166c><!--[--><!----><span data-v-df386fbc>指南</span><!----><!--]--><!----></a><!--]--><!--[--><a class="vp-link no-icon link navbar-menu-link" href="/blog/" tabindex="0" data-v-3a384c0d data-v-df386fbc data-v-5d1d166c><!--[--><!----><span data-v-df386fbc>博客</span><!----><!--]--><!----></a><!--]--><!--]--></nav><!--[--><!--]--><!----><div class="vp-navbar-appearance appearance" data-v-d2b84b78 data-v-0e3cbb2f><button class="vp-switch vp-switch-appearance" type="button" role="switch" title aria-checked="false" data-v-0e3cbb2f data-v-2d5150fe data-v-f28532e9><span class="check" data-v-f28532e9><span class="icon" data-v-f28532e9><!--[--><span class="vpi-sun sun" data-v-2d5150fe></span><span class="vpi-moon moon" data-v-2d5150fe></span><!--]--></span></span></button></div><div class="vp-social-links vp-navbar-social-links social-links" data-v-d2b84b78 data-v-41168934 data-v-96086d71><!--[--><a class="vp-social-link no-icon" href="/" aria-label="github" target="_blank" rel="noopener" data-v-96086d71 data-v-ca6d616f><span class="vpi-social-github" /></a><!--]--></div><div class="vp-flyout vp-navbar-extra extra" data-v-d2b84b78 data-v-f8a06030 data-v-1fb51458><button type="button" class="button" aria-haspopup="true" aria-expanded="false" aria-label="extra navigation" data-v-1fb51458><span class="vpi-more-horizontal icon" data-v-1fb51458></span></button><div class="menu" data-v-1fb51458><div class="vp-menu" data-v-1fb51458 data-v-0c79e271><!----><!--[--><!--[--><!----><div class="group" data-v-f8a06030><div class="item appearance" data-v-f8a06030><p class="label" data-v-f8a06030>外观</p><div class="appearance-action" data-v-f8a06030><button class="vp-switch vp-switch-appearance" type="button" role="switch" title aria-checked="false" data-v-f8a06030 data-v-2d5150fe data-v-f28532e9><span class="check" data-v-f28532e9><span class="icon" data-v-f28532e9><!--[--><span class="vpi-sun sun" data-v-2d5150fe></span><span class="vpi-moon moon" data-v-2d5150fe></span><!--]--></span></span></button></div></div></div><div class="group" data-v-f8a06030><div class="item social-links" data-v-f8a06030><div class="vp-social-links social-links-list" data-v-f8a06030 data-v-96086d71><!--[--><a class="vp-social-link no-icon" href="/" aria-label="github" target="_blank" rel="noopener" data-v-96086d71 data-v-ca6d616f><span class="vpi-social-github" /></a><!--]--></div></div></div><!--]--><!--]--></div></div></div><!--[--><!--]--><button type="button" class="vp-navbar-hamburger hamburger" aria-label="mobile navigation" aria-expanded="false" aria-controls="nav-screen" data-v-d2b84b78 data-v-5df43bb1><span class="container" data-v-5df43bb1><span class="top" data-v-5df43bb1></span><span class="middle" data-v-5df43bb1></span><span class="bottom" data-v-5df43bb1></span></span></button></div></div></div></div><div class="divider" data-v-d2b84b78><div class="divider-line" data-v-d2b84b78></div></div></div><!----></header><div class="vp-local-nav fixed reached-top is-blog" data-v-cbe75d8c data-v-ed2ff53c><button class="hidden menu" disabled aria-expanded="false" aria-controls="SidebarNav" data-v-ed2ff53c><span class="vpi-align-left menu-icon" data-v-ed2ff53c></span><span class="menu-text" data-v-ed2ff53c>Menu</span></button><div class="vp-local-nav-outline-dropdown" style="--vp-vh:0px;" data-v-ed2ff53c data-v-2d311500><button data-v-2d311500>返回顶部</button><!----></div></div><!----><!--[--><div id="VPContent" vp-content class="vp-content" data-v-cbe75d8c data-v-4071ceaf><div class="vp-doc-container is-blog" data-v-4071ceaf data-v-c8e27ed6><!--[--><!--]--><div class="container" data-v-c8e27ed6><!----><div class="content" data-v-c8e27ed6><div class="content-container" data-v-c8e27ed6><!--[--><!--]--><main class="main" data-v-c8e27ed6><nav class="vp-breadcrumb" data-v-c8e27ed6 data-v-18b39186><ol vocab="https://schema.org/" typeof="BreadcrumbList" data-v-18b39186><!--[--><li property="itemListElement" typeof="ListItem" data-v-18b39186><a class="vp-link no-icon link breadcrumb" href="/" property="item" typeof="WebPage" data-v-18b39186 data-v-5d1d166c><!--[-->首页<!--]--><!----></a><span class="vpi-chevron-right" data-v-18b39186></span><meta property="name" content="首页" data-v-18b39186><meta property="position" content="1" data-v-18b39186></li><li property="itemListElement" typeof="ListItem" data-v-18b39186><a class="vp-link no-icon link breadcrumb" href="/blog/" property="item" typeof="WebPage" data-v-18b39186 data-v-5d1d166c><!--[-->博客<!--]--><!----></a><span class="vpi-chevron-right" data-v-18b39186></span><meta property="name" content="博客" data-v-18b39186><meta property="position" content="2" data-v-18b39186></li><li property="itemListElement" typeof="ListItem" data-v-18b39186><a class="vp-link no-icon link breadcrumb" href="/blog/categories/?id=e778d6" property="item" typeof="WebPage" data-v-18b39186 data-v-5d1d166c><!--[-->后端<!--]--><!----></a><span class="vpi-chevron-right" data-v-18b39186></span><meta property="name" content="后端" data-v-18b39186><meta property="position" content="3" data-v-18b39186></li><li property="itemListElement" typeof="ListItem" data-v-18b39186><a class="vp-link no-icon link breadcrumb current" href="/article/ssldc2pf/" property="item" typeof="WebPage" data-v-18b39186 data-v-5d1d166c><!--[-->Spring基本思想<!--]--><!----></a><!----><meta property="name" content="Spring基本思想" data-v-18b39186><meta property="position" content="4" data-v-18b39186></li><!--]--></ol></nav><!--[--><!--]--><!--[--><h1 class="vp-doc-title page-title" data-v-b3a1841a>Spring基本思想 <!----></h1><div class="vp-doc-meta" data-v-b3a1841a><!--[--><!--]--><p class="reading-time" data-v-b3a1841a><span class="vpi-books icon" data-v-b3a1841a></span><span data-v-b3a1841a>约 1522 字</span><span data-v-b3a1841a>大约 5 分钟</span></p><p data-v-b3a1841a><span class="vpi-tag icon" data-v-b3a1841a></span><!--[--><a class="vp-link no-icon link tag vp-tag-qwfg" href="/blog/tags/?tag=李新月" data-v-b3a1841a data-v-5d1d166c><!--[-->李新月<!--]--><!----></a><a class="vp-link no-icon link tag vp-tag-ul3j" href="/blog/tags/?tag=Spring" data-v-b3a1841a data-v-5d1d166c><!--[-->Spring<!--]--><!----></a><!--]--></p><!--[--><!--]--><p class="create-time" data-v-b3a1841a><span class="vpi-clock icon" data-v-b3a1841a></span><span data-v-b3a1841a>2025-06-25</span></p></div><!--]--><!--[--><!--]--><div class="_article_ssldc2pf_ external-link-icon-enabled vp-doc plume-content" vp-content data-v-c8e27ed6><!--[--><!--]--><div data-v-c8e27ed6><h2 id="spring基本思想" tabindex="-1"><a class="header-anchor" href="#spring基本思想"><span>Spring基本思想</span></a></h2><h3 id="控制反转-ioc" tabindex="-1"><a class="header-anchor" href="#控制反转-ioc"><span>控制反转（IoC）</span></a></h3><h4 id="问题提出" tabindex="-1"><a class="header-anchor" href="#问题提出"><span>问题提出</span></a></h4><p><strong>问题：实现方法需要调用操作对象，导致层与层之间耦合度高，如果后续需要更改操作对象，需要修改大量代码</strong></p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>//UserDao接口</span></span>
+<span class="line"><span>public interface UserDao {</span></span>
+<span class="line"><span>   public void getUser();</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>//UserDao实现类1</span></span>
+<span class="line"><span>public class UserDaoImpl implements UserDao {</span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void getUser() {</span></span>
+<span class="line"><span>       System.out.println(&quot;获取用户数据&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>//UserDao实现类2</span></span>
+<span class="line"><span>public class UserDaoMySqlImpl implements UserDao {</span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void getUser() {</span></span>
+<span class="line"><span>       System.out.println(&quot;MySql获取用户数据&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>UserService调用UserDao实现类1</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>//UserService接口</span></span>
+<span class="line"><span>public interface UserService {</span></span>
+<span class="line"><span>   public void getUser();</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>//UserService实现类</span></span>
+<span class="line"><span>public class UserServiceImpl implements UserService {</span></span>
+<span class="line"><span>   private UserDao userDao = new UserDaoImpl();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void getUser() {</span></span>
+<span class="line"><span>       userDao.getUser();</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>此时，如果UserService需要调用实现类2，则需要修改UserServiceImpl代码</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>public class UserServiceImpl implements UserService {</span></span>
+<span class="line"><span>   private UserDao userDao = new UserDaoMySqlImpl();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void getUser() {</span></span>
+<span class="line"><span>       userDao.getUser();</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果后续还需要更改实现类，则需要大量的修改代码</p><h4 id="解决思路" tabindex="-1"><a class="header-anchor" href="#解决思路"><span>解决思路</span></a></h4><p><strong>UserService不直接new UserDao的实现类，改为使用set方法，之后在调用UserService时指明要使用的UserDao的实现类（IoC原型）</strong></p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>public class UserServiceImpl implements UserService {</span></span>
+<span class="line"><span>   private UserDao userDao;</span></span>
+<span class="line"><span>   // 利用set实现</span></span>
+<span class="line"><span>   public void setUserDao(UserDao userDao) {</span></span>
+<span class="line"><span>       this.userDao = userDao;</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void getUser() {</span></span>
+<span class="line"><span>       userDao.getUser();</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>@Test</span></span>
+<span class="line"><span>public void test(){</span></span>
+<span class="line"><span>   UserServiceImpl service = new UserServiceImpl();</span></span>
+<span class="line"><span>   service.setUserDao( new UserDaoImpl() );</span></span>
+<span class="line"><span>   service.getUser();</span></span>
+<span class="line"><span>   //换成实现类2</span></span>
+<span class="line"><span>   service.setUserDao( new UserDaoMySqlImpl() );</span></span>
+<span class="line"><span>   service.getUser();</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><strong>IoC(Inversion of Control)：控制反转，将bean创建权交给第三方，代码内部不自己new bean而是找第三方，IoC是一种设计思想，DI(依赖注入)是实现IoC的一种方法</strong></p><h3 id="依赖注入-di" tabindex="-1"><a class="header-anchor" href="#依赖注入-di"><span>依赖注入（DI）</span></a></h3><p><strong>DI（Dependency Injection）：依赖注入，强调bean之间的依赖关系</strong></p><p>假设bean1内部需要bean2</p><p>原始方法：程序找第三方要bean1，再找第三方要bean2，再将bean1设置给bean1</p><p>DI思想：第三方在创建bean1的时候就创建bean2，并把bean2设置给bean1，此时程序在获取bean1的时候，bean1的内部已经包含了bean2</p><h4 id="di实现" tabindex="-1"><a class="header-anchor" href="#di实现"><span>DI实现</span></a></h4><p><img src="https://raw.githubusercontent.com/li1013/A219/main/image-20250622110214815.png" alt="image-20250622110214815"></p><p>beans.xml：</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span></span>
+<span class="line"><span>&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;</span></span>
+<span class="line"><span>      xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span></span>
+<span class="line"><span>      xsi:schemaLocation=&quot;http://www.springframework.org/schema/beans</span></span>
+<span class="line"><span>       http://www.springframework.org/schema/beans/spring-beans.xsd&quot;&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   &lt;bean id=&quot;UserDaoImpl&quot; class=&quot;com.kuang.dao.impl.UserDaoImpl&quot;/&gt;</span></span>
+<span class="line"><span>   &lt;bean id=&quot;MysqlImpl&quot; class=&quot;com.kuang.dao.impl.UserDaoMySqlImpl&quot;/&gt;</span></span>
+<span class="line"><span>   </span></span>
+<span class="line"><span>   &lt;bean id=&quot;ServiceImpl&quot; class=&quot;com.kuang.service.impl.UserServiceImpl&quot;&gt;</span></span>
+<span class="line"><span>   </span></span>
+<span class="line"><span>       &lt;!--引用另外一个bean--&gt;</span></span>
+<span class="line"><span>       &lt;!--name是ServiceImpl中的set方法后面的那部分,首字母小写--&gt;</span></span>
+<span class="line"><span>       &lt;!--ref是被引用bean的id--&gt;</span></span>
+<span class="line"><span>       &lt;property name=&quot;userDao&quot; ref=&quot;MysqlImpl&quot;/&gt;</span></span>
+<span class="line"><span>   &lt;/bean&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;/beans&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>使用BeanFactory解析bean配置清单</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>@Test</span></span>
+<span class="line"><span>public void test(){</span></span>
+<span class="line"><span>   //创建工厂对象</span></span>
+<span class="line"><span>   DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();</span></span>
+<span class="line"><span>   //创建xml文件阅读器</span></span>
+<span class="line"><span>   XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(beanFactory);</span></span>
+<span class="line"><span>   //读取配置文件</span></span>
+<span class="line"><span>   reader.loadBeanDefinitions(&quot;beans.xml&quot;);</span></span>
+<span class="line"><span>   //根据id获取bean实例对象</span></span>
+<span class="line"><span>   UserServiceImpl serviceImpl = (UserServiceImpl) beanFactory.getBean(&quot;ServiceImpl&quot;);</span></span>
+<span class="line"><span>   serviceImpl.getUser();</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>使用ApplicationContext解析bean配置清单</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>@Test</span></span>
+<span class="line"><span>public void test(){</span></span>
+<span class="line"><span>   ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);</span></span>
+<span class="line"><span>   UserServiceImpl serviceImpl = (UserServiceImpl) applicationContext.getBean(&quot;ServiceImpl&quot;);</span></span>
+<span class="line"><span>   serviceImpl.getUser();</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="beanfactory与applicationcontex" tabindex="-1"><a class="header-anchor" href="#beanfactory与applicationcontex"><span>BeanFactory与ApplicationContex</span></a></h4><p>BeanFactory是Spring的早期接口，称为Spring的Bean工厂</p><p>ApplicationContex称为Spring容器，内部封装了BeanFactory，比BeanFactory功能更强大，开发中常用ApplicationContex</p><p>ApplicationContext在BeanFactory基础上对功能进行了扩展，例如：监听功能、国际化功能等。BeanFactory的API更偏向底层，ApplicationContext的API大多数是对这些底层API的封装 Bean创建的主要逻辑和功能都被封装在BeanFactory中，ApplicationContext不仅继承了BeanFactory，而且ApplicationContext内部还维护着BeanFactory的引用，所以，ApplicationContext与BeanFactory既有继承关系，又有融合关系。 Bean的初始化时机不同，原始BeanFactory是在首次调用getBean时才进行Bean的创建，而ApplicationContext则是配置文件加载，容器一创建就将Bean都实例化并初始化好。</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>//BeanFactory初始化Bean</span></span>
+<span class="line"><span>UserServiceImpl serviceImpl = (UserServiceImpl) beanFactory.getBean(&quot;ServiceImpl&quot;);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>//ApplicationContex初始化Bean</span></span>
+<span class="line"><span>ApplicationContext applicationContext = new ClassPathXmlApplicationContext(&quot;beans.xml&quot;);</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3 id="面向切面编程-aop" tabindex="-1"><a class="header-anchor" href="#面向切面编程-aop"><span>面向切面编程（AOP）</span></a></h3><p>问题提出：业务代码中会包含一些事务、日志等重复代码，一般被称为 横切逻辑代码</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>public interface UserService {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   public void add();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   public void delete();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   public void update();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   public void search();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>public class UserServiceImpl implements UserService{</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void add() {</span></span>
+<span class="line"><span>       LogService.addVLog();//添加日志</span></span>
+<span class="line"><span>       System.out.println(&quot;增加用户&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void delete() {</span></span>
+<span class="line"><span>       LogService.addVLog();//添加日志</span></span>
+<span class="line"><span>       System.out.println(&quot;删除用户&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void update() {</span></span>
+<span class="line"><span>       LogService.addVLog();//添加日志</span></span>
+<span class="line"><span>       System.out.println(&quot;更新用户&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void search() {</span></span>
+<span class="line"><span>       LogService.addVLog();//添加日志</span></span>
+<span class="line"><span>       System.out.println(&quot;查询用户&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>思想：将横切逻辑代码与业务代码分离</p><p>业务接口和实现类</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>public interface UserService {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   public void add();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   public void delete();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   public void update();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   public void search();</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span>public class UserServiceImpl implements UserService{</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void add() {</span></span>
+<span class="line"><span>       System.out.println(&quot;增加用户&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void delete() {</span></span>
+<span class="line"><span>       System.out.println(&quot;删除用户&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void update() {</span></span>
+<span class="line"><span>       System.out.println(&quot;更新用户&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   @Override</span></span>
+<span class="line"><span>   public void search() {</span></span>
+<span class="line"><span>       System.out.println(&quot;查询用户&quot;);</span></span>
+<span class="line"><span>  }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>增强类</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>public class DiyPointcut {</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>   public void before(){</span></span>
+<span class="line"><span>       LogService.addVLog();//添加日志</span></span>
+<span class="line"><span>  }  </span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>xml配置</p><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>&lt;!--注册bean--&gt;</span></span>
+<span class="line"><span>&lt;bean id=&quot;diy&quot; class=&quot;com.kuang.config.DiyPointcut&quot;/&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>&lt;!--aop的配置--&gt;</span></span>
+<span class="line"><span>&lt;aop:config&gt;</span></span>
+<span class="line"><span>   &lt;!--使用AOP的标签实现--&gt;</span></span>
+<span class="line"><span>   &lt;aop:aspect ref=&quot;diy&quot;&gt;</span></span>
+<span class="line"><span>       &lt;aop:pointcut id=&quot;diyPonitcut&quot; expression=&quot;execution(* com.kuang.service.UserServiceImpl.*(..))&quot;/&gt;</span></span>
+<span class="line"><span>       &lt;aop:before pointcut-ref=&quot;diyPonitcut&quot; method=&quot;before&quot;/&gt;</span></span>
+<span class="line"><span>   &lt;/aop:aspect&gt;</span></span>
+<span class="line"><span>&lt;/aop:config&gt;</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2 id="补充" tabindex="-1"><a class="header-anchor" href="#补充"><span>补充</span></a></h2><h4 id="bean" tabindex="-1"><a class="header-anchor" href="#bean"><span>bean</span></a></h4><p>bean本质上是指代任何被 Spring 加载生成出来的对象</p><p>Spring官方文档定义：在 Spring 中，构成应用程序主干并由Spring IoC容器管理的对象称为bean。bean是一个由Spring IoC容器实例化、组装和管理的对象。即：</p><ul><li>bean是对象，一个或者多个不限定</li><li>bean由Spring中一个叫IoC的东西管理</li><li>我们的应用程序由一个个bean构成</li></ul><p>bean规范如下：</p><ul><li>所有属性为private</li><li>提供默认构造方法</li><li>提供getter和setter</li><li>实现serializable接口</li></ul><div class="language- line-numbers-mode" data-highlighter="shiki" data-ext="" style="--shiki-light:#393a34;--shiki-dark:#dbd7caee;--shiki-light-bg:#ffffff;--shiki-dark-bg:#121212;"><pre class="shiki shiki-themes vitesse-light vitesse-dark vp-code"><code><span class="line"><span>import java.io.Serializable;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>public class User implements Serializable { // 实现序列化接口[1,7](@ref)</span></span>
+<span class="line"><span>    // 1. 所有属性为 private</span></span>
+<span class="line"><span>    private String name;</span></span>
+<span class="line"><span>    private String email;</span></span>
+<span class="line"><span>    private int age;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    // 2. 提供默认构造方法（无参数）[3,6,7](@ref)</span></span>
+<span class="line"><span>    public User() {</span></span>
+<span class="line"><span>        // 可选：初始化默认值</span></span>
+<span class="line"><span>        this.name = &quot;Unknown&quot;;</span></span>
+<span class="line"><span>        this.age = 0;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    // 3. 带参构造方法（非必需，但增强灵活性）[5,8](@ref)</span></span>
+<span class="line"><span>    public User(String name, String email, int age) {</span></span>
+<span class="line"><span>        this.name = name;</span></span>
+<span class="line"><span>        this.email = email;</span></span>
+<span class="line"><span>        this.age = age;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    // 4. 提供 getter 和 setter 方法（命名规范：getXxx/setXxx）[1,4,7](@ref)</span></span>
+<span class="line"><span>    public String getName() {</span></span>
+<span class="line"><span>        return name;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void setName(String name) {</span></span>
+<span class="line"><span>        this.name = name;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public String getEmail() {</span></span>
+<span class="line"><span>        return email;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void setEmail(String email) {</span></span>
+<span class="line"><span>        this.email = email;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public int getAge() {</span></span>
+<span class="line"><span>        return age;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    public void setAge(int age) {</span></span>
+<span class="line"><span>        if (age &gt;= 0) { // 可选：添加业务逻辑校验</span></span>
+<span class="line"><span>            this.age = age;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    // 可选：重写 toString() 方便调试[7](@ref)</span></span>
+<span class="line"><span>    @Override</span></span>
+<span class="line"><span>    public String toString() {</span></span>
+<span class="line"><span>        return &quot;User{name=&#39;&quot; + name + &quot;&#39;, email=&#39;&quot; + email + &quot;&#39;, age=&quot; + age + &quot;}&quot;;</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span>}</span></span></code></pre><div class="line-numbers" aria-hidden="true" style="counter-reset:line-number 0;"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h4 id="参考" tabindex="-1"><a class="header-anchor" href="#参考"><span>参考</span></a></h4><p>https://cloud.tencent.com/developer/article/1921912</p><p>https://zhuanlan.zhihu.com/p/141204279</p><p>https://blog.csdn.net/weixin_44207403/article/details/106736102?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522a467ce3120ee5a36ac1b3794bcb51409%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=a467ce3120ee5a36ac1b3794bcb51409&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2<sub>all</sub>top_positive~default-1-106736102-null-null.142<sup>v102</sup>pc_search_result_base2&amp;utm_term=spring&amp;spm=1018.2226.3001.4187</p></div><!----><!----><!----></div></main><footer class="vp-doc-footer" data-v-c8e27ed6 data-v-694c96a1><!--[--><!--]--><!----><div class="contributors" aria-label="Contributors" data-v-694c96a1><span class="contributors-label" data-v-694c96a1>贡献者: </span><span class="contributors-info" data-v-694c96a1><!--[--><!--[--><span class="contributor" data-v-694c96a1>lixinyue</span><!----><!--]--><!--]--></span></div><nav class="prev-next" data-v-694c96a1><div class="pager" data-v-694c96a1><a class="vp-link no-icon link pager-link prev" href="/article/gjai9jer/" data-v-694c96a1 data-v-5d1d166c><!--[--><span class="desc" data-v-694c96a1>上一页</span><span class="title" data-v-694c96a1>JS核心语法</span><!--]--><!----></a></div><div class="pager" data-v-694c96a1><a class="vp-link no-icon link pager-link next" href="/article/o81vnd6z/" data-v-694c96a1 data-v-5d1d166c><!--[--><span class="desc" data-v-694c96a1>下一页</span><span class="title" data-v-694c96a1>Redis介绍及其常用命令</span><!--]--><!----></a></div></nav></footer><!----><!--[--><!--]--></div></div></div><!--[--><!--]--></div></div><!--]--><button type="button" class="vp-back-to-top" aria-label="back to top" data-v-cbe75d8c style="display:none;" data-v-ffc676f5><span class="percent" data-allow-mismatch data-v-ffc676f5>0%</span><span class="show icon vpi-back-to-top" data-v-ffc676f5></span><svg aria-hidden="true" data-v-ffc676f5><circle cx="50%" cy="50%" data-allow-mismatch style="stroke-dasharray:calc(0% - 12.566370614359172px) calc(314.1592653589793% - 12.566370614359172px);" data-v-ffc676f5></circle></svg></button><footer class="vp-footer" vp-footer data-v-cbe75d8c data-v-c081d0cb><!--[--><div class="container" data-v-c081d0cb><p class="message" data-v-c081d0cb>Powered by <a target="_blank" href="https://v2.vuepress.vuejs.org/">VuePress</a> & <a target="_blank" href="https://theme-plume.vuejs.press">vuepress-theme-plume</a></p><!----></div><!--]--></footer><!--[--><!--]--><!--]--></div><!----><!--]--><!--[--><!--]--><!--]--></div><script type="module" src="/assets/app-CAXNO6dR.js" defer></script></body></html>
